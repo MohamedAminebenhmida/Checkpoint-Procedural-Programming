@@ -1,0 +1,21 @@
+PROCEDURE Dot_product(v1,v2:array, ps:FLOAT)
+VAR
+    sum:FLOAT;
+    i:INTEGER;
+BEGIN
+    FOR i FROM 0 TO max v1.length step 1 DO
+        ps:=ps + v1[i]*v2[i];
+    END_FOR
+END
+ALGORITHM orthogonal
+VAR
+    ps:FLOAT;
+    v1,v2:array;
+BEGIN
+Dot_product(v1,v2,ps);
+IF (ps=0) THEN
+    write("les deux vecteurs sont orthgonaux")
+ELSE
+    write("les deux vecteurs ne sont pas orthogonaux")
+END_IF 
+END
