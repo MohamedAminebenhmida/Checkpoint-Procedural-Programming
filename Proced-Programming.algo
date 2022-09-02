@@ -1,6 +1,6 @@
-PROCEDURE Dot_product(v1,v2:array, ps:FLOAT)
+PROCEDURE Dot_product(v1,v2:array,VAR ps:FLOAT)
 VAR
-    sum:FLOAT;
+
     i:INTEGER;
 BEGIN
     FOR i FROM 0 TO max v1.length step 1 DO
@@ -9,7 +9,7 @@ BEGIN
 END
 ALGORITHM orthogonal
 VAR
-    ps:FLOAT;
+    ps:FLOAT:=0;
     v1,v2:array;
 BEGIN
 Dot_product(v1,v2,ps);
